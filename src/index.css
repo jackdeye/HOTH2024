@@ -1,4 +1,51 @@
-:root {
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ea; /* Light green background */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #388e3c; /* Dark green header */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dropdowns {
+  margin: 50px auto; /* Center horizontally with auto margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items (child elements) in the center horizontally */
+}
+
+select, input[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #388e3c; /* Same dark green as header */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+}
+
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +112,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
