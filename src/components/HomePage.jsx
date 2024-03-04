@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-export default function HomePage() {
-  const navigate =  useNavigate(); 
+export default function HomePage({setZipcode}) {
+  const navigate = useNavigate();
+
+
   const handleButtonClick = () => {
     navigate('/results-page');
 }; 
-  const [zipcode, setZipcode] = useState(0);
   return (
        <div>
           <header>

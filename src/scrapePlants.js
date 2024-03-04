@@ -3,16 +3,17 @@ import axios from 'axios'
 import usZips from 'us-zips'
 
 
-export function a(zip) {
-
-  const { latitude, longitude } = usZips[zip];
-  // var longitude = usZips[zip].longitude
+export function getTrees(zip) {
+  console.log("we in get trees")
+  // const { latitude, longitude } = usZips[zip];
+  var longitude = usZips[zip].longitude;
+  var latitude = usZips[zip].latitude;
 
   // console.log("undefined?");
   console.log(latitude);
   console.log(longitude);
   const url = 'https://calscape.org/loc-' + latitude + ',' + longitude + '(' + zip + ')/cat-Trees/'
-  // console.log(url);
+  console.log(url);
 
   const dataPromise = axios.get(url)
     .then((response) => {
@@ -39,5 +40,3 @@ export function a(zip) {
   return dataPromise;
 }
 
-
-console.log(a(90045));
