@@ -16,7 +16,7 @@ export default function ResultsPage(zipcode) {
           </header>
           <Link to='/'> Home </Link>
           <ul>{
-            trees.map((plant, index) => <li key={index}>{plant}</li>)
+            trees.map((plant, index) => <div><img src={plant.img}/> <li key={index}>{plant.name}</li></div>)
             }</ul>
 
         </div>
