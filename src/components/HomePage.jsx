@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import tree_footer from "/src/assets/images/tree_footer.png";
 
 export default function HomePage({setZipcode}) {
@@ -15,6 +15,7 @@ export default function HomePage({setZipcode}) {
             <h1>50 Shades of Green</h1>
           </header>
 
+          <Link to='/about-page'> About </Link>
 
           <div className="dropdowns">
             <input type="number" id="zipcode" placeholder="Enter your zipcode here" onChange={(event) => setZipcode(parseInt(event.target.value))}/>
