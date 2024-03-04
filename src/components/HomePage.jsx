@@ -15,7 +15,11 @@ export default function HomePage({setZipcode}) {
             <h1>50 Shades of Green</h1>
           </header>
 
+
           <div className="dropdowns">
+            <input type="number" id="zipcode" placeholder="Enter your zipcode here" onChange={(event) => setZipcode(parseInt(event.target.value))}/>
+
+
             <select id="skill-level">
               <option value="" disabled selected>Time Commitment</option>
               <option value="Beginner">Low</option>
@@ -24,7 +28,7 @@ export default function HomePage({setZipcode}) {
             </select>
 
 
-            <input type="number" id="zipcode" placeholder="Enter your zipcode here" onChange={(event) => setZipcode(parseInt(event.target.value))}/>
+    
 
 
             <select id="budget">
@@ -35,7 +39,7 @@ export default function HomePage({setZipcode}) {
             </select>
 
             <footer>
-              <img src={tree_footer}></img>
+              <img className="footerImage" src={tree_footer}></img>
             </footer>
 
             <button onClick={handleButtonClick}>Go Green</button>
