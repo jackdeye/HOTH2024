@@ -17,5 +17,6 @@ export default function ResultsPage(zipcode) {
           </header>
           <Link to='/'> Home </Link>
           {trees.map((plantInput, index) => <PlantRecommend plant={plantInput}/>)}
+
         </div>
 )};
