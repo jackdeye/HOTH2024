@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
     return (
@@ -26,9 +27,6 @@ export default function HomePage() {
               <option value="high">High</option>
             </select>
           </div>
-
-          <button id="go-green">Go Green</button>
-
         </div> 
     )
 }
