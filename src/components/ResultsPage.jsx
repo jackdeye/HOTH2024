@@ -14,9 +14,9 @@ export default function ResultsPage(zipcode) {
           
           <header>
             <h1>Your Plant Results!</h1>
+            <Link to='/'> Home </Link>
           </header>
-          <Link to='/'> Home </Link>
-          {trees.map((plantInput, index) => <PlantRecommend plant={plantInput}/>)}
+          {trees.map((plantInput, index) => <PlantRecommend plant={plantInput.name} imageID={plantInput.img}/>)}
 
         </div>
 )};

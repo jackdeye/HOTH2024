@@ -59,6 +59,10 @@ button:hover {
   background-color: #f0f8ea; 
 }
 
+.plantImg {
+  width: 150px; 
+}
+
 .plantRecommend {
   display: block;
   font-size: 24px;
