@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
-    return (
+  const navigate =  useNavigate(); 
+  const handleButtonClick = () => {
+    navigate('/results-page');
+}; 
+  const [zipcode, setZipcode] = useState(0);
+  return (
        <div>
           <header>
             <h1>50 Shades of Green</h1>
@@ -17,7 +22,7 @@ export default function HomePage() {
             </select>
 
 
-            <input type="text" id="address" placeholder="Enter your zipcode here" />
+            <input type="number" id="zipcode" placeholder="Enter your zipcode here" onChange={(event) => setZipcode(parseInt(event.target.value))}/>
 
 
             <select id="budget">
@@ -26,6 +31,7 @@ export default function HomePage() {
               <option value="medium">Medium</option>
               <option value="high">High</option>
             </select>
+            <button onClick={handleButtonClick}>Go Green</button>
           </div>
         </div> 
     )
