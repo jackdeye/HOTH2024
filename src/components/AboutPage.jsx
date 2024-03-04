@@ -12,7 +12,7 @@ export default function AboutPage() {
         </h2>
         <br></br>
         <p2>
-          Monoculture lawns contribute to biodiversity loss and soil degradation. They limit the habitat for beneficial insects and wildlife and require excessive water and maintenance.  Growing native plants reduces water usage and supports local ecosystems. Thousands of homes across California feature the same grass lawn, contributing to pesticide runoff and using millions of gallons of water a year, accounting for more than 50% of household water usage. 50 Shades of Green offers custom plant recommendations to diversify home gardens and fight against the dangers of monoculture.
+          Monoculture lawns contribute to biodiversity loss and soil degradation. They limit the habitat for beneficial insects and wildlife and require excessive water and maintenance.  Growing native plants reduces water usage and supports local ecosystems. Thousands of homes across California feature the same grass lawn, contributing to pesticide runoff and using millions of gallons of water a year, accounting for more than 50% of household water usage. 50 Shades of Green offers custom plant recommendations to diversify home gardens and fight against the dangers of monoculture. Currently 50 shades of green only funcitons with California zipcodes.
         </p2>
         <br></br>
         <br></br>

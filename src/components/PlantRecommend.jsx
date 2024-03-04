@@ -20,7 +20,7 @@ export default function PlantRecommend({plant, imageID}) {
         <div className="plantRecommend">
             <h2>{s}</h2>
             <div><img className="plantImg" src={imageID} alt="Tree" /></div>
-            <a href={link}>{w}</a>
+            <a href={link} target="_blank" rel="noopener noreferrer">{w}</a>
             {/* <h2>Cost Goes Here!</h2>
             <h2>Ease of Care Goes Here!</h2> */}
         </div>

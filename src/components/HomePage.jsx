@@ -40,7 +40,7 @@ export default function HomePage({setZipcode}) {
             </select>
 
             <footer>
-              <img className="footerImage" src={tree_footer}></img>
+              <img className="footerImage" src={tree_footer} height={150}></img>
             </footer>
 
             <button onClick={handleButtonClick}>Go Green</button>
