@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import tree_footer from "/src/assets/images/tree_footer.png";
 
-export default function HomePage() {
-    return (
+export default function HomePage({setZipcode}) {
+  const navigate = useNavigate();
+
+
+  const handleButtonClick = () => {
+    navigate('/results-page');
+}; 
+  return (
        <div>
           <header>
             <h1>50 Shades of Green</h1>
@@ -18,7 +24,7 @@ export default function HomePage() {
             </select>
 
 
-            <input type="text" id="address" placeholder="Enter your zipcode here" />
+            <input type="number" id="zipcode" placeholder="Enter your zipcode here" onChange={(event) => setZipcode(parseInt(event.target.value))}/>
 
 
             <select id="budget">
@@ -31,6 +37,9 @@ export default function HomePage() {
             <footer>
               <img src={tree_footer}></img>
             </footer>
+
+            <button onClick={handleButtonClick}>Go Green</button>
+
           </div>
         </div> 
     )

@@ -1,14 +1,23 @@
-import PlantRecommend from "./PlantRecommend";
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import {getTrees} from '../scrapePlants.js'
 
-export default function ResultsPage() {
+
+export default function ResultsPage(zipcode) {
+    const [ trees, setTrees ] = useState([]);
+    useEffect(()=>{
+        getTrees(zipcode.zipcode).then((t) => setTrees(t));
+    },[]);
     return (
-       <div >
+       <div>
+          
           <header>
             <h1>This is a new Page</h1>
           </header>
-            <PlantRecommend plant= "Plant 1" imageUrl="https://calscape.org/cache/0000_0000_1216_0997_th.jpeg" />
-            <PlantRecommend plant= "Plant 2"/>
-            <PlantRecommend plant= "Plant 3"/>
-            <PlantRecommend plant= "Plant 4"/>
+          <Link to='/'> Home </Link>
+          <ul>{
+            trees.map((plant, index) => <li key={index}>{plant}</li>)
+            }</ul>
+
         </div>
 )};
