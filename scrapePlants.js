@@ -2,30 +2,42 @@ import cheerio from 'cheerio';
 import axios from 'axios'
 import usZips from 'us-zips'
 
-const zip = '94707'
 
-var latitude = usZips[zip].latitude
-var longitude = usZips[zip].longitude
+export function a(zip) {
 
-console.log(latitude);
-console.log(longitude);
-const url = 'https://calscape.org/loc-'+ latitude + ',' + longitude + '(' + zip +')/cat-Trees/'
-console.log(url);
+  const { latitude, longitude } = usZips[zip];
+  // var longitude = usZips[zip].longitude
 
-axios.get(url)
-  .then((response) => {
-    const html = response.data;
-    const $ = cheerio.load(html);
-    const idElements = $('[id^="id__"]');
+  // console.log("undefined?");
+  console.log(latitude);
+  console.log(longitude);
+  const url = 'https://calscape.org/loc-' + latitude + ',' + longitude + '(' + zip + ')/cat-Trees/'
+  // console.log(url);
 
-    // Now you can extract specific data from each idElement
-    idElements.each((index, element) => {
-      const commonNameText = $(element).find('.common_name').text();  
-      const speciesText = $(element).find('span.species').text();
-      console.log(`Species ${index + 1}: ${commonNameText} - ${speciesText}`);
+  const dataPromise = axios.get(url)
+    .then((response) => {
+      const html = response.data;
+      const $ = cheerio.load(html);
+      const idElements = $('[id^="id__"]');
+
+      // Now you can extract specific data from each idElement
+      const strings = idElements.map((_, element) => {
+        const commonNameText = $(element).find('.common_name').text();
+        const speciesText = $(element).find('span.species').text();
+        // return "fdsak";
+        return `${commonNameText}, ${speciesText}`;
+        // console.log(`Species ${index + 1}: ${commonNameText} - ${speciesText}`);
+      }).toArray();
+      return strings;
+
+
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error.message);
     });
-  })
-  .catch((error) => {
-    console.error('Error fetching data:', error.message);
-  });
 
+  return dataPromise;
+}
+
+
+console.log(a(90045));
