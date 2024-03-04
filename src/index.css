@@ -44,6 +44,39 @@ button:hover {
   background-color: #2e7d32; /* Darker green on hover */
 }
 
+#resultsPage {
+  background-color: #f0f8ea; 
+}
+
+.plantRecommend {
+  display: block;
+  font-size: 24px;
+  margin: 40px auto; /* Center the list horizontally */
+  max-width: 600px; 
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #61b865; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f8ea;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+img {
+  width: 1250px; 
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

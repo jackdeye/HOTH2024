@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import tree_footer from "/src/assets/images/tree_footer.png";
 
 export default function HomePage() {
     return (
@@ -26,6 +27,10 @@ export default function HomePage() {
               <option value="medium">Medium</option>
               <option value="high">High</option>
             </select>
+
+            <footer>
+              <img src={tree_footer}></img>
+            </footer>
           </div>
         </div> 
     )
