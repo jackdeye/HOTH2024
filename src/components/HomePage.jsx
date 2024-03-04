@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import tree_footer from "/src/assets/images/tree_footer.png";
 
 export default function HomePage({setZipcode}) {
   const navigate = useNavigate();
@@ -32,7 +33,13 @@ export default function HomePage({setZipcode}) {
               <option value="medium">Medium</option>
               <option value="high">High</option>
             </select>
+
+            <footer>
+              <img src={tree_footer}></img>
+            </footer>
+
             <button onClick={handleButtonClick}>Go Green</button>
+
           </div>
         </div> 
     )
